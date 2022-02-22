@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "hypixel-api": "^1.2.0",
+    "node-fetch": "^3.2.0",
+    "start": "node --experimental-modules src/index.mjs "
+  }
+}
