@@ -22,7 +22,7 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-  res.render("viewer");
+  res.render("index");
 });
 
 app.post("/", async (req, res) => {
@@ -50,6 +50,7 @@ app.post("/", async (req, res) => {
     range: "PurseV!A:A",
   });
 
+
   let finalFinalB = finalB.replace(".",",");
   let finalFinalS = finalS.replace(".",",");
 
@@ -62,6 +63,28 @@ app.post("/", async (req, res) => {
       values: [[finalD, finalFinalB, finalFinalS]],
     },
   });
+
+
+  // Automatic sending WIP
+  // async function main () {
+  //   const request = {
+  //     auth,
+  //     spreadsheetId,
+  //     range: "PurseV!A:C",
+  //     valueInputOption: "USER_ENTERED", 
+  //     resource: {
+  //       values: [[finalD, finalFinalB, finalFinalS]],
+  //     },
+  //   };
+  
+  //   try {
+  //     const response = (await sheets.spreadsheets.values.update(request)).data;
+  //     console.log(JSON.stringify(response, null, 2));
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // }
+  // main();
 
 
 res.send("Successfully submitted! Thank you!");

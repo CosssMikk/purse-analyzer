@@ -15,9 +15,17 @@
   </head>
   <body>
     <h1>Purse V2  (Semi auto entry)</h1>
-    <form action="" method="POST">
-      <button type="submit">Submit</button>
+    <form name="submitButton" action="" method="POST">
+      <button type="submit" id="submit"oneclick="submitButton">Submit</button>
     </form>
+<script>
+  function submitForm() {
+  var form = document.getElementsByName('submitButton')[0];
+   form.submit();
+   form.reset();  
+   return false;
+  };
+</script>
 
     <!-- Lien temporaire -->
     <nav>
