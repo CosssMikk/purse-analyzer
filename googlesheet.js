@@ -6,6 +6,7 @@ const express = require('express');
 const app = express();
 const { finalB, finalS} = require('./finalPrices.json');
 
+// Set time between data request
 var now = new Date();
 var delay = 60 * 60 * 15;
 // var delay = 60 * 60 * 1000; // 1 hour in msec
@@ -26,6 +27,7 @@ app.get("/", (req, res) => {
 
 app.post("/", async (req, res) => {
 
+// Google connection and configuration
   const auth = new google.auth.GoogleAuth({
     keyFile: "credentials.json",
     scopes: "https://www.googleapis.com/auth/spreadsheets",
@@ -96,7 +98,7 @@ const item = "BOOSTER_COOKIE"
                 let num2 = number2.toFixed(1);
 
 
-    //Fonctionnel 
+    // Put datas into json
         console.log(`The Current sell price for ${item} is ${num1} and the buy price is ${num2}`);
         
         let finalB = `${num2}`;

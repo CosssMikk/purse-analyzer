@@ -1,6 +1,5 @@
 const express = require("express");
 const { google } = require("googleapis");
-const program = require('./main.js');
 
 const app = express();
 app.set("view engine", "ejs");
