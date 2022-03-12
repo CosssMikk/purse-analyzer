@@ -105,7 +105,7 @@ const { sheets } = require('googleapis/build/src/apis/sheets');
 const item = "BOOSTER_COOKIE"
 
             var now = new Date();
-            var delay = 60 * 60 * 13;
+            var delay = 60 * 60 * 15;
             // var delay = 60 * 60 * 1000; // 1 hour in msec
             var start = delay - (now.getMinutes() * 60 + now.getSeconds()) * 1000 + now.getMilliseconds();
 
